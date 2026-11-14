@@ -1,0 +1,26 @@
+name: Pelloux Guidelines audit
+description: Fail the build when files, functions or parameter lists break the Pelloux limits. Legacy code is held by a baseline ratchet.
+author: Rémi Pelloux
+branding:
+  icon: check-square
+  color: blue
+inputs:
+  path:
+    description: Repository root to audit
+    default: "."
+  verbose:
+    description: Show every warning
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - name: Pelloux audit
+      shell: bash
+      env:
+        PELLOUX_ROOT: ${{ inputs.path }}
+        PELLOUX_VERBOSE: ${{ inputs.verbose }}
+        PELLOUX_TOOL: ${{ github.action_path }}/tools/pelloux.py
+      run: |
+        args=(audit --root "$PELLOUX_ROOT")
+        if [ "$PELLOUX_VERBOSE" = "true" ]; then args+=(--verbose); fi
+        python3 "$PELLOUX_TOOL" "${args[@]}"

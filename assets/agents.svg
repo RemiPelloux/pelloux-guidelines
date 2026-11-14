@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 470" width="1280" height="470" role="img" aria-label="Nine language profiles feed one GUIDELINES.md, which the installer writes into the files read by Claude Code, Codex, Cursor, GitHub Copilot, Windsurf and Gemini CLI."><title>Nine language profiles feed one GUIDELINES.md, which the installer writes into the files read by Claude Code, Codex, Cursor, GitHub Copilot, Windsurf and Gemini CLI.</title><style>@keyframes flow{from{stroke-dashoffset:10}to{stroke-dashoffset:-400}}.flow{animation:flow 3.3s linear infinite}.flow2{animation:flow 3s linear infinite}@media (prefers-reduced-motion:reduce){*{animation:none!important}.r{opacity:1!important;transform:none!important}.rd{opacity:.28!important}.rs{transform:scaleX(1)!important}}</style>
+<rect width="1280" height="470" rx="18" fill="#111113"/>
+<text xml:space="preserve" x="64" y="64" fill="#6AA5FF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" font-weight="500" text-anchor="start">ONE SOURCE, EVERY AGENT</text>
+<rect x="64" y="108" width="150" height="26" rx="13" fill="none" stroke="#2A2A2F"/>
+<text xml:space="preserve" x="139" y="126" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="400" text-anchor="middle">TypeScript</text>
+<path d="M214 121 C 360 121, 380 225.0, 520 225.0" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow" style="animation-delay:-0.00s" d="M214 121 C 360 121, 380 225.0, 520 225.0" fill="none" stroke="#6AA5FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="64" y="142" width="150" height="26" rx="13" fill="none" stroke="#2A2A2F"/>
+<text xml:space="preserve" x="139" y="160" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="400" text-anchor="middle">Python</text>
+<path d="M214 155 C 360 155, 380 225.0, 520 225.0" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow" style="animation-delay:-0.37s" d="M214 155 C 360 155, 380 225.0, 520 225.0" fill="none" stroke="#6AA5FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="64" y="176" width="150" height="26" rx="13" fill="none" stroke="#2A2A2F"/>
+<text xml:space="preserve" x="139" y="194" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="400" text-anchor="middle">PHP</text>
+<path d="M214 189 C 360 189, 380 225.0, 520 225.0" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow" style="animation-delay:-0.74s" d="M214 189 C 360 189, 380 225.0, 520 225.0" fill="none" stroke="#6AA5FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="64" y="210" width="150" height="26" rx="13" fill="none" stroke="#2A2A2F"/>
+<text xml:space="preserve" x="139" y="228" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="400" text-anchor="middle">Rust</text>
+<path d="M214 223 C 360 223, 380 225.0, 520 225.0" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow" style="animation-delay:-1.11s" d="M214 223 C 360 223, 380 225.0, 520 225.0" fill="none" stroke="#6AA5FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="64" y="244" width="150" height="26" rx="13" fill="none" stroke="#2A2A2F"/>
+<text xml:space="preserve" x="139" y="262" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="400" text-anchor="middle">Go</text>
+<path d="M214 257 C 360 257, 380 225.0, 520 225.0" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow" style="animation-delay:-1.48s" d="M214 257 C 360 257, 380 225.0, 520 225.0" fill="none" stroke="#6AA5FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="64" y="278" width="150" height="26" rx="13" fill="none" stroke="#2A2A2F"/>
+<text xml:space="preserve" x="139" y="296" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="400" text-anchor="middle">Dart</text>
+<path d="M214 291 C 360 291, 380 225.0, 520 225.0" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow" style="animation-delay:-1.85s" d="M214 291 C 360 291, 380 225.0, 520 225.0" fill="none" stroke="#6AA5FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="64" y="312" width="150" height="26" rx="13" fill="none" stroke="#2A2A2F"/>
+<text xml:space="preserve" x="139" y="330" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="400" text-anchor="middle">Swift</text>
+<path d="M214 325 C 360 325, 380 225.0, 520 225.0" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow" style="animation-delay:-2.22s" d="M214 325 C 360 325, 380 225.0, 520 225.0" fill="none" stroke="#6AA5FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="64" y="346" width="150" height="26" rx="13" fill="none" stroke="#2A2A2F"/>
+<text xml:space="preserve" x="139" y="364" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="400" text-anchor="middle">Kotlin</text>
+<path d="M214 359 C 360 359, 380 225.0, 520 225.0" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow" style="animation-delay:-2.59s" d="M214 359 C 360 359, 380 225.0, 520 225.0" fill="none" stroke="#6AA5FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="64" y="380" width="150" height="26" rx="13" fill="none" stroke="#2A2A2F"/>
+<text xml:space="preserve" x="139" y="398" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="400" text-anchor="middle">C / C++</text>
+<path d="M214 393 C 360 393, 380 225.0, 520 225.0" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow" style="animation-delay:-2.96s" d="M214 393 C 360 393, 380 225.0, 520 225.0" fill="none" stroke="#6AA5FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="520" y="150" width="240" height="150" rx="14" fill="#19191C" stroke="#6AA5FF" stroke-opacity=".6"/>
+<text xml:space="preserve" x="640.0" y="202" fill="#F3F1EC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="20" font-weight="500" text-anchor="middle">GUIDELINES.md</text>
+<text x="640.0" y="232" fill="#8E8B85" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle">10 rules · hard limits</text>
+<text x="640.0" y="256" fill="#8E8B85" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle">+ 9 language profiles</text>
+<text xml:space="preserve" x="640.0" y="280" fill="#55534E" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" text-anchor="middle">EN · FR</text>
+<path d="M760 225.0 C 830 225.0, 820 124, 900 124" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow2" style="animation-delay:-0.00s" d="M760 225.0 C 830 225.0, 820 124, 900 124" fill="none" stroke="#4FD08A" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="900" y="104" width="316" height="40" rx="10" fill="#19191C" stroke="#2A2A2F"/>
+<text x="916" y="129" fill="#F3F1EC" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start">Claude Code</text>
+<text xml:space="preserve" x="1200" y="129" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" text-anchor="end">CLAUDE.md · plugin · hook</text>
+<path d="M760 225.0 C 830 225.0, 820 174, 900 174" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow2" style="animation-delay:-0.50s" d="M760 225.0 C 830 225.0, 820 174, 900 174" fill="none" stroke="#4FD08A" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="900" y="154" width="316" height="40" rx="10" fill="#19191C" stroke="#2A2A2F"/>
+<text x="916" y="179" fill="#F3F1EC" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start">Codex</text>
+<text xml:space="preserve" x="1200" y="179" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" text-anchor="end">AGENTS.md</text>
+<path d="M760 225.0 C 830 225.0, 820 224, 900 224" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow2" style="animation-delay:-1.00s" d="M760 225.0 C 830 225.0, 820 224, 900 224" fill="none" stroke="#4FD08A" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="900" y="204" width="316" height="40" rx="10" fill="#19191C" stroke="#2A2A2F"/>
+<text x="916" y="229" fill="#F3F1EC" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start">Cursor</text>
+<text xml:space="preserve" x="1200" y="229" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" text-anchor="end">.cursor/rules/*.mdc</text>
+<path d="M760 225.0 C 830 225.0, 820 274, 900 274" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow2" style="animation-delay:-1.50s" d="M760 225.0 C 830 225.0, 820 274, 900 274" fill="none" stroke="#4FD08A" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="900" y="254" width="316" height="40" rx="10" fill="#19191C" stroke="#2A2A2F"/>
+<text x="916" y="279" fill="#F3F1EC" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start">GitHub Copilot</text>
+<text xml:space="preserve" x="1200" y="279" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" text-anchor="end">.github/instructions/</text>
+<path d="M760 225.0 C 830 225.0, 820 324, 900 324" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow2" style="animation-delay:-2.00s" d="M760 225.0 C 830 225.0, 820 324, 900 324" fill="none" stroke="#4FD08A" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="900" y="304" width="316" height="40" rx="10" fill="#19191C" stroke="#2A2A2F"/>
+<text x="916" y="329" fill="#F3F1EC" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start">Windsurf</text>
+<text xml:space="preserve" x="1200" y="329" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" text-anchor="end">.windsurf/rules/</text>
+<path d="M760 225.0 C 830 225.0, 820 374, 900 374" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+<path class="flow2" style="animation-delay:-2.50s" d="M760 225.0 C 830 225.0, 820 374, 900 374" fill="none" stroke="#4FD08A" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 400"/>
+<rect x="900" y="354" width="316" height="40" rx="10" fill="#19191C" stroke="#2A2A2F"/>
+<text x="916" y="379" fill="#F3F1EC" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start">Gemini CLI</text>
+<text xml:space="preserve" x="1200" y="379" fill="#8E8B85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="400" text-anchor="end">GEMINI.md</text>
+<text x="640" y="440" fill="#55534E" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle">install.sh writes each agent's own file · the audit is the same everywhere</text>
+</svg>

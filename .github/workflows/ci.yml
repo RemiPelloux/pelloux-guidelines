@@ -1,0 +1,61 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Unit tests
+        run: cd tests && python -m unittest -v
+
+      - name: The project follows its own rules
+        run: python tools/pelloux.py audit
+
+      - name: Generated skill matches GUIDELINES.md
+        run: python scripts/build.py --check
+
+      - name: Installer smoke test
+        run: |
+          repo="$(mktemp -d)"
+          cd "$repo"
+          git init -q
+          echo '{}' > package.json
+          mkdir -p src/services
+          printf 'export function add(a: number, b: number) {\n  return a + b;\n}\n' > src/services/math.ts
+          python "$GITHUB_WORKSPACE/installer/install.py" --agents all --ci --locale fr
+          for f in AGENTS.md CLAUDE.md GEMINI.md .cursor/rules/pelloux-typescript.mdc \
+                   .windsurf/rules/pelloux-guidelines.md .github/copilot-instructions.md \
+                   .github/workflows/pelloux.yml pelloux.json pelloux-baseline.json .pelloux/pelloux.py; do
+            test -f "$f" || { echo "missing $f"; exit 1; }
+          done
+          grep -q "Terminer le travail" AGENTS.md
+          python .pelloux/pelloux.py audit
+
+      - name: shellcheck
+        run: shellcheck install.sh
+
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./
+        with:
+          path: .

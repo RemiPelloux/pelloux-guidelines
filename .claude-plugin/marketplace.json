@@ -1,0 +1,16 @@
+{
+  "name": "pelloux-guidelines",
+  "owner": {
+    "name": "Rémi Pelloux"
+  },
+  "metadata": {
+    "description": "The Pelloux Guidelines: coding discipline for AI agents, checked before every commit."
+  },
+  "plugins": [
+    {
+      "name": "pelloux-guidelines",
+      "source": "./",
+      "description": "Ten rules, hard size limits, nine language profiles, four skills and a live size guard for the agent loop."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "pelloux-guidelines",
+  "version": "1.0.0",
+  "description": "Coding discipline for AI agents: ten rules, hard limits on files, functions and parameters, nine language profiles, and a size guard that tells the agent the moment an edit breaks a limit.",
+  "author": {
+    "name": "Rémi Pelloux",
+    "url": "https://remipelloux.github.io/"
+  },
+  "homepage": "https://github.com/RemiPelloux/pelloux-guidelines",
+  "repository": "https://github.com/RemiPelloux/pelloux-guidelines",
+  "license": "MIT",
+  "keywords": ["coding-standards", "ai-agents", "code-quality", "guidelines", "linting", "pre-commit", "claude-code", "codex", "cursor"]
+}

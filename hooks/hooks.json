@@ -1,0 +1,17 @@
+{
+  "description": "Pelloux size guard: after each edit, tells the agent if the file now breaks a hard limit.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/tools/pelloux.py\" hook",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
