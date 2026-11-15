@@ -6,6 +6,7 @@ import json
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Optional
 
 from .languages import Language
 
@@ -35,6 +36,7 @@ class Config:
     file_limit: int = 400
     module_limit: int = 200
     function_limit: int = 25
+    import_depth: Optional[int] = 2
     params: dict = field(default_factory=dict)
     languages: list = field(default_factory=list)
     baseline: str = "pelloux-baseline.json"
@@ -73,6 +75,7 @@ def load(root: Path) -> Config:
     cfg.file_limit = int(data.get("file", {}).get("limit", cfg.file_limit))
     cfg.module_limit = int(data.get("module", {}).get("limit", cfg.module_limit))
     cfg.function_limit = int(data.get("function", {}).get("limit", cfg.function_limit))
+    cfg.import_depth = data.get("imports", {}).get("maxParentDepth", cfg.import_depth)
     cfg.params.update(data.get("params", {}))
     cfg.languages = list(data.get("languages", []))
     cfg.baseline = data.get("baseline", cfg.baseline)

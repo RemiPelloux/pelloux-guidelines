@@ -94,6 +94,7 @@ Découper la tâche en étapes vérifiables avant de modifier quoi que ce soit :
 | Fonction ou méthode | ≤ 25 lignes | 25 lignes |
 | Paramètres | ≤ 3 | 3 (4 en PHP, Python, Go, Rust, C et C++) |
 | Profondeur d'imbrication | ≤ 3 | 3 |
+| Import relatif | ≤ 2 niveaux (`../../`) | 2 niveaux |
 
 - La longueur d'une fonction compte les lignes non vides et hors commentaires, de la signature à la
   ligne de fermeture.
@@ -103,6 +104,9 @@ Découper la tâche en étapes vérifiables avant de modifier quoi que ce soit :
   liste à cet endroit veut dire que la classe en fait trop, et la limite de fichier le détectera.
 - Pas de nombres magiques : utiliser des constantes nommées ou la config.
 - Préférer les early returns aux conditions imbriquées.
+- Pas d'import relatif profond. `../../../lib/x` casse dès qu'un des deux fichiers bouge et cache
+  où vit le code. Importer depuis la racine du projet : un alias (`@/`), un import absolu de
+  package, `package:`, `crate::` ou le chemin d'include.
 - L'audit tolère 10 % de dépassement avant d'échouer (440 lignes pour un fichier, 220 pour un
   module d'entrée, 27 pour une fonction). La tolérance est pour la machine. La limite reste la
   cible à viser en écrivant.

@@ -57,10 +57,16 @@ takes five minutes.
 | Entry module: controller, route handler, hook, service | 200 lines | 200 | 221 |
 | Function or method | 25 lines | 25 | 28 |
 | Parameters | 3 | 3, or 4 in PHP, Python, Go, Rust, C and C++ | over the limit |
+| Relative import | 2 levels up (`../../`) | 2 | `../../../` and deeper |
 
 Function length counts non-blank, non-comment lines. Receivers (`self`, `this`) do not count as
 parameters, and constructors that inject dependencies are exempt. Tests, migrations, locales,
 generated and vendored code are exempt from size limits but not from the debug checks.
+
+Deep relative imports are a code smell the audit catches in TypeScript, JavaScript, Python, PHP,
+Dart, Rust and C/C++: `../../../lib/x` breaks when either file moves and hides where the code
+lives. The message names the fix for the language: a `@/` alias, an absolute import, `package:`,
+`crate::` or the include path.
 
 ## Nine languages
 
@@ -212,13 +218,14 @@ Optional `pelloux.json` at the repository root. Lists add to the defaults.
   "file": { "target": 300, "limit": 400 },
   "module": { "limit": 200, "paths": ["src/features/*/api/**"] },
   "function": { "limit": 25 },
+  "imports": { "maxParentDepth": 2 },
   "params": { "python": 3 },
   "exclude": ["legacy/**"],
   "sizeExempt": ["src/legal/**"]
 }
 ```
 
-Skip one function with a `pelloux-ignore` comment on its signature line or the line above, and
+Set `maxParentDepth` to `null` to turn the import check off. Skip one function with a `pelloux-ignore` comment on its signature line or the line above, and
 say why. Default entry-module paths: `hooks/`, `services/`, `controllers/`, `routes/`,
 `handlers/`.
 

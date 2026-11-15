@@ -87,6 +87,7 @@ Turn the task into steps you can check before you edit:
 | Function or method | ≤ 25 lines | 25 lines |
 | Parameters | ≤ 3 | 3 (4 in PHP, Python, Go, Rust, C and C++) |
 | Nesting depth | ≤ 3 | 3 |
+| Relative import | ≤ 2 levels up (`../../`) | 2 levels |
 
 - Function length counts non-blank, non-comment lines from the signature to the closing line.
 - Parameters exclude the receiver (`self`, `this`, `&self`). Beyond the limit, pass an options
@@ -95,6 +96,9 @@ Turn the task into steps you can check before you edit:
   means the class does too much, which the file limit will catch.
 - No magic numbers: use named constants or config.
 - Prefer early returns over nested conditions.
+- No deep relative imports. `../../../lib/x` breaks when either file moves and hides where the
+  code lives. Import from the project root: a path alias (`@/`), an absolute package import,
+  `package:`, `crate::` or the include path.
 - The audit allows a 10 % tolerance before it fails (440 lines for a file, 220 for an entry
   module, 27 for a function). The tolerance is for the machine. The limit is the target you write
   to.

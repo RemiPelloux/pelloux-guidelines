@@ -26,6 +26,7 @@ paramètres.
 - Les traductions passent par `__()` / `trans()`. Aucune chaîne visible par l'utilisateur dans un
   controller.
 - Un import par ligne, groupés, formatés par Pint ou PHP-CS-Fixer.
+- Autoloading PSR-4 de Composer et namespaces. Pas de `require '../../../x.php'`.
 
 ## Ne jamais committer
 

@@ -25,6 +25,7 @@ model class.
 - Every string from `context.l10n`. The ARB files stay in parity across locales.
 - State in one place per feature (Riverpod, Bloc or `ChangeNotifier`). Widgets read it, they do
   not own business logic.
+- `package:` imports (`package:app/widgets/x.dart`) instead of `../../../`.
 
 ## Never commit
 
@@ -49,6 +50,7 @@ linter:
     prefer_final_locals: true
     always_declare_return_types: true
     avoid_dynamic_calls: true
+    always_use_package_imports: true
 ```
 
 The Dart analyzer has no size rules: the Pelloux audit covers files, functions and parameters.
