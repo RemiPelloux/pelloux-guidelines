@@ -24,6 +24,7 @@ Docstrings and comments do not count toward function length.
 - `logging`, never `print`, in library and service code. `print` is fine in a CLI's output layer.
 - `pathlib` over `os.path`, f-strings over `%` and `.format`.
 - Early `return` and guard clauses instead of nested `if`.
+- Absolute imports from the package root (`from app.billing import invoice`). Relative imports climb two levels at most (`from ... import`).
 
 ## Never commit
 
@@ -36,7 +37,7 @@ Docstrings and comments do not count toward function length.
 
 ```toml
 [tool.ruff.lint]
-select = ["E", "F", "B", "UP", "SIM", "C90", "PL", "T10", "T20", "ERA"]
+select = ["E", "F", "B", "UP", "SIM", "C90", "PL", "T10", "T20", "ERA", "TID"]
 
 [tool.ruff.lint.pylint]
 max-args = 4
@@ -45,6 +46,9 @@ max-statements = 25
 
 [tool.ruff.lint.mccabe]
 max-complexity = 8
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "parents"   # stricter than the audit: no parent-relative import at all
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["PLR2004", "T20"]

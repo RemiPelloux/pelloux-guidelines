@@ -22,6 +22,7 @@ Profile for `.rs`. Applies on top of the core guidelines.
 - `#![forbid(unsafe_code)]` in crates that do not need `unsafe`. Where you need it, one
   `// SAFETY:` comment per block.
 - Borrow by default (`&str`, `&[T]`), own only when you store.
+- `crate::` paths instead of `super::super::super::`.
 
 ## Never commit
 

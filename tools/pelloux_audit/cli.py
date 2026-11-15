@@ -11,7 +11,7 @@ from pathlib import Path
 from . import __version__, baseline, config, files, report
 from .audit import Request, collect, run
 
-HOOK_RULES = {"file-size", "module-size", "function-length", "params"}
+HOOK_RULES = {"file-size", "module-size", "function-length", "params", "deep-import"}
 
 
 def main(argv: list) -> int:
@@ -64,7 +64,7 @@ def hook(payload: str) -> int:
         return 0
     lines = [f"- {f.path}:{f.line} {f.message}" for f in result.result.errors]
     print("Pelloux Guidelines: this edit breaks a hard limit. Split it before you finish "
-          "(rule 7), touching only what the task needs:\n" + "\n".join(lines), file=sys.stderr)
+          "(rule 7) or fix it, touching only what the task needs:\n" + "\n".join(lines), file=sys.stderr)
     return 2
 
 

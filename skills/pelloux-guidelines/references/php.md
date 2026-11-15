@@ -24,6 +24,7 @@ Constructors with promoted, injected dependencies are exempt from the parameter 
 - Eloquent: eager-load with `with()`, never query inside a loop.
 - Translations through `__()` / `trans()`. No user-visible string in a controller.
 - Imports one per line, grouped, formatted by Pint or PHP-CS-Fixer.
+- Composer PSR-4 autoloading and namespaces. No `require '../../../x.php'`.
 
 ## Never commit
 

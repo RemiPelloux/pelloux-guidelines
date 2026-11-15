@@ -23,6 +23,7 @@ guidelines.
 - `constexpr` and `enum class` instead of `#define` constants.
 - `std::span`, `std::string_view` for non-owning views. Bounds-checked access in new code.
 - Warnings are errors: `-Wall -Wextra -Wpedantic -Werror`.
+- Source roots on the include path (`target_include_directories`) instead of `#include "../../../x.h"`.
 
 ## Never commit
 

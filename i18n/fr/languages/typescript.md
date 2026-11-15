@@ -25,6 +25,7 @@ fichier.
 - Affiner les types avec des type guards et `satisfies`, pas avec des casts.
 - `return` anticipé pour les états de chargement, vide et erreur, avant le JSX principal.
 - Chaque chaîne visible par l'utilisateur passe par la couche i18n. Pas de ternaires sur la locale.
+- Les imports partent de la racine du projet via un alias `@/` (`paths` dans `tsconfig.json`, `resolve.alias` dans Vite). Deux `../` au maximum.
 
 ## Ne jamais committer
 
@@ -49,6 +50,7 @@ export default [
       "no-magic-numbers": ["warn", { ignore: [-1, 0, 1, 2], ignoreArrayIndexes: true }],
       "no-console": ["error", { allow: ["warn", "error"] }],
       "no-debugger": "error",
+      "no-restricted-imports": ["error", { patterns: [{ group: ["../../../*"], message: "Import from @/ instead" }] }],
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/ban-ts-comment": "error",
     },

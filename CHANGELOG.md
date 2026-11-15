@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.1.0, 2026-11-15
+
+- New audit rule `deep-import`: relative imports that climb more than two levels (`../../../x`)
+  are a code smell. Detected in TypeScript and JavaScript (`import`, `export … from`, `require`,
+  dynamic `import()`), Python (`from ....x`), PHP (`require`, `include`), Dart, Rust
+  (`super::super::super`) and C/C++ (`#include`). The message names the fix for each language.
+  Configure with `"imports": { "maxParentDepth": 2 }`, or `null` to turn it off. The Claude Code
+  hook reports it too.
+- Rule 7 and the language profiles say how to import from the project root, with matching
+  settings for ESLint (`no-restricted-imports`), Ruff (`TID252`) and the Dart analyzer
+  (`always_use_package_imports`).
+- Upgrading a repository that already has a baseline: run `pelloux seed` once to record existing
+  deep imports, in its own commit.
+
 ## 1.0.0, 2026-11-14
 
 First public release.

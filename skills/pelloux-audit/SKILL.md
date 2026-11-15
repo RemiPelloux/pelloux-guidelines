@@ -1,6 +1,6 @@
 ---
 name: pelloux-audit
-description: Run the Pelloux audit and fix what it finds. It reports files over 400 lines, entry modules over 200, functions over 25 lines, too many parameters and debug leftovers, with a baseline ratchet for legacy code. Use when the user says "run pelloux", "pelloux audit", "check the limits", "why does the pre-commit fail", "split this file", or after a large change before you call it done.
+description: Run the Pelloux audit and fix what it finds. It reports files over 400 lines, entry modules over 200, functions over 25 lines, too many parameters, debug leftovers and deep relative imports, with a baseline ratchet for legacy code. Use when the user says "run pelloux", "pelloux audit", "check the limits", "why does the pre-commit fail", "split this file", or after a large change before you call it done.
 ---
 
 # Pelloux audit
@@ -24,6 +24,7 @@ baselined legacy violations, `stale` are baseline entries that are now fixed.
 | Rule | Fix |
 |---|---|
 | `debug` | Delete the line. If the output was meant to stay, use the project's logger. |
+| `deep-import` | Replace `../../../x` with the project's root import: the `@/` alias, an absolute package import, `package:`, `crate::` or the include path. Add the alias to the build config only if the project has none, and say so. |
 | `params` | Group the values into one options object, struct or dataclass named after the concept, and update the call sites. |
 | `function-length` | Guard clauses first, then extract one named helper per step. |
 | `module-size` | Move logic out of the controller, hook or service into an action, a helper module or a smaller hook. |

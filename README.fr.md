@@ -59,11 +59,17 @@ Cinq minutes de lecture.
 | Module d'entrée : controller, route handler, hook, service | 200 lignes | 200 | 221 |
 | Fonction ou méthode | 25 lignes | 25 | 28 |
 | Paramètres | 3 | 3, ou 4 en PHP, Python, Go, Rust, C et C++ | au-delà de la limite |
+| Import relatif | 2 niveaux (`../../`) | 2 | `../../../` et au-delà |
 
 La longueur d'une fonction compte les lignes non vides et hors commentaires. Les receveurs (`self`,
 `this`) ne comptent pas comme paramètres, et les constructeurs qui injectent des dépendances sont
 exemptés. Les tests, les migrations, les fichiers de traduction, le code généré et le code
 vendorisé échappent aux limites de taille, mais pas aux vérifications de debug.
+
+Les imports relatifs profonds sont un code smell que l'audit détecte en TypeScript, JavaScript,
+Python, PHP, Dart, Rust et C/C++ : `../../../lib/x` casse dès qu'un des deux fichiers bouge et
+cache où vit le code. Le message donne la correction propre au langage : un alias `@/`, un import
+absolu, `package:`, `crate::` ou le chemin d'include.
 
 ## Neuf langages
 
@@ -221,13 +227,14 @@ Un `pelloux.json` optionnel à la racine du dépôt. Les listes s'ajoutent aux v
   "file": { "target": 300, "limit": 400 },
   "module": { "limit": 200, "paths": ["src/features/*/api/**"] },
   "function": { "limit": 25 },
+  "imports": { "maxParentDepth": 2 },
   "params": { "python": 3 },
   "exclude": ["legacy/**"],
   "sizeExempt": ["src/legal/**"]
 }
 ```
 
-Pour ignorer une fonction, mettre un commentaire `pelloux-ignore` sur la ligne de sa signature ou
+Mettre `maxParentDepth` à `null` désactive la vérification des imports. Pour ignorer une fonction, mettre un commentaire `pelloux-ignore` sur la ligne de sa signature ou
 sur la ligne du dessus, et dire pourquoi. Chemins de modules d'entrée par défaut : `hooks/`,
 `services/`, `controllers/`, `routes/`, `handlers/`.
 

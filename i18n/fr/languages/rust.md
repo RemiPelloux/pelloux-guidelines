@@ -24,6 +24,7 @@ Profil pour `.rs`. S'applique en plus des règles communes.
 - `#![forbid(unsafe_code)]` dans les crates qui n'ont pas besoin d'`unsafe`. Là où c'est nécessaire,
   un commentaire `// SAFETY:` par bloc.
 - Emprunter par défaut (`&str`, `&[T]`), ne posséder que pour stocker.
+- Des chemins `crate::` plutôt que `super::super::super::`.
 
 ## Ne jamais committer
 

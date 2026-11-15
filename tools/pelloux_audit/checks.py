@@ -10,6 +10,7 @@ from .config import Config
 from .functions import find_functions
 from .languages import CONFLICT_MARKERS, Language
 from .mask import mask
+from .smells import advice, deep_imports
 
 _PATTERNS: dict = {}
 
@@ -45,6 +46,7 @@ def check_file(unit: Unit, cfg: Config, rules: Optional[set] = None) -> list:
         for fn in find_functions(unit.text, masked, unit.lang):
             findings += function_findings(unit, fn, cfg)
     findings += debug_findings(unit, masked)
+    findings += import_findings(unit, masked, cfg)
     return [f for f in findings if rules is None or f.rule in rules]
 
 
@@ -91,6 +93,18 @@ def debug_findings(unit: Unit, masked: str) -> list:
     noun = "debug leftover" if len(hits) == 1 else "debug leftovers"
     return [Finding("debug", unit.path, hits[0][0], "error", len(hits), 0,
                     f"{len(hits)} {noun}: {detail}")]
+
+
+def import_findings(unit: Unit, masked: str, cfg: Config) -> list:
+    hits = deep_imports(unit.text, masked, unit.lang, cfg.import_depth)
+    if not hits:
+        return []
+    lines = ", ".join(f"line {line} ({depth} up)" for line, depth in hits[:5])
+    noun = "relative import climbs" if len(hits) == 1 else "relative imports climb"
+    message = (f"{len(hits)} {noun} more than {cfg.import_depth} levels: {lines}. "
+               f"Instead, {advice(unit.lang)}")
+    return [Finding("deep-import", unit.path, hits[0][0], "error", len(hits), cfg.import_depth,
+                    message)]
 
 
 def _debug_token(raw: str, code: str, lang: Language) -> Optional[str]:

@@ -26,6 +26,7 @@ Les docstrings et les commentaires ne comptent pas dans la longueur d'une foncti
   dans la couche de sortie d'une CLI.
 - `pathlib` plutôt que `os.path`, les f-strings plutôt que `%` et `.format`.
 - `return` anticipé et guard clauses plutôt que des `if` imbriqués.
+- Imports absolus depuis la racine du package (`from app.billing import invoice`). Les imports relatifs remontent de deux niveaux au maximum (`from ... import`).
 
 ## Ne jamais committer
 
@@ -38,7 +39,7 @@ Les docstrings et les commentaires ne comptent pas dans la longueur d'une foncti
 
 ```toml
 [tool.ruff.lint]
-select = ["E", "F", "B", "UP", "SIM", "C90", "PL", "T10", "T20", "ERA"]
+select = ["E", "F", "B", "UP", "SIM", "C90", "PL", "T10", "T20", "ERA", "TID"]
 
 [tool.ruff.lint.pylint]
 max-args = 4
@@ -47,6 +48,9 @@ max-statements = 25
 
 [tool.ruff.lint.mccabe]
 max-complexity = 8
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "parents"   # stricter than the audit: no parent-relative import at all
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["PLR2004", "T20"]

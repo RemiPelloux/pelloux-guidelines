@@ -25,6 +25,7 @@ communes.
 - `std::span`, `std::string_view` pour les vues non propriétaires. Accès avec contrôle des bornes
   dans le nouveau code.
 - Les warnings sont des erreurs : `-Wall -Wextra -Wpedantic -Werror`.
+- Les racines du code dans le chemin d'include (`target_include_directories`) plutôt que `#include "../../../x.h"`.
 
 ## Ne jamais committer
 

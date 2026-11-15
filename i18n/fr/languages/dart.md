@@ -26,6 +26,7 @@ il manque une classe de modèle.
 - Chaque chaîne vient de `context.l10n`. Les fichiers ARB restent alignés entre toutes les locales.
 - L'état à un seul endroit par fonctionnalité (Riverpod, Bloc ou `ChangeNotifier`). Les widgets le
   lisent, ils ne portent pas de logique métier.
+- Des imports `package:` (`package:app/widgets/x.dart`) plutôt que `../../../`.
 
 ## Ne jamais committer
 
@@ -50,6 +51,7 @@ linter:
     prefer_final_locals: true
     always_declare_return_types: true
     avoid_dynamic_calls: true
+    always_use_package_imports: true
 ```
 
 L'analyzer Dart n'a pas de règles de taille : l'audit Pelloux couvre les fichiers, les fonctions et

@@ -23,6 +23,7 @@ components and hooks, not by moving JSX into helper functions in the same file.
 - Narrow with type guards and `satisfies`, not with casts.
 - Early `return` for loading, empty and error states before the main JSX.
 - Every user-visible string goes through the i18n layer. No ternaries on the locale.
+- Imports start at the project root through a `@/` alias (`paths` in `tsconfig.json`, `resolve.alias` in Vite). Two `../` at most.
 
 ## Never commit
 
@@ -47,6 +48,7 @@ export default [
       "no-magic-numbers": ["warn", { ignore: [-1, 0, 1, 2], ignoreArrayIndexes: true }],
       "no-console": ["error", { allow: ["warn", "error"] }],
       "no-debugger": "error",
+      "no-restricted-imports": ["error", { patterns: [{ group: ["../../../*"], message: "Import from @/ instead" }] }],
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/ban-ts-comment": "error",
     },
